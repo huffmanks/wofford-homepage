@@ -312,7 +312,7 @@ img {
 
 .events {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     justify-content: center;
     align-items: center;
     gap: 20px;
