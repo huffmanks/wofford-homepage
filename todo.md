@@ -10,5 +10,3 @@
 4. News story section
     - Toggle rotators
     - Does clicking story go to story??
-5. Upcoming events section
-    - Test with long titles

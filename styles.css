@@ -295,32 +295,27 @@ img {
 
 .events-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
     width: 90%;
     margin: 0 auto;
     color: #282829;
 }
 
-.upcoming-events {
-    padding-right: 30px;
-}
-
 .upcoming-events-heading {
+    margin-bottom: 16px;
     font-size: 38px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 16px;
 }
 
 .events {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, auto));
     justify-content: center;
     align-items: center;
-    gap: 30px;
-}
-
-.event-item {
-    flex: 1;
+    gap: 20px;
 }
 
 .event-date {
