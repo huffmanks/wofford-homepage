@@ -11,6 +11,9 @@
 
 /* General styles */
 /* These can be removed */
+#mainImage {
+    transition: all 2s ease-in-out;
+}
 *,
 ::before,
 ::after {
