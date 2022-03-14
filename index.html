@@ -12,12 +12,17 @@
 <body>
     <main class="home-main">
         <!-- Nav and media section -->
-        <section class="home-section-nav-video">
+        <section class="home-section-nav-media">
             <header class="home-header">
                 <nav class="home-nav">
                     <div class="home-nav-items">
+                        <button id="home-mobile-menu" type="button" class="home-mobile-menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <div class="home-nav-logo">
-                            <a href="/"><img src="./images/logo.png" alt="Wofford logo"></a>
+                            <a href="/"><img src="./images/site/logo.png" alt="Wofford logo"></a>
                         </div>
                         <div class="home-nav-link"><a href="/about">About</a></div>
                         <div class="home-nav-link">
@@ -32,20 +37,82 @@
                         <div class="home-nav-link">
                             <a href="https://woffordterriers.com">Athletics</a>
                         </div>
-                    </div>
-                    <div class="home-nav-items right">
-                        <div class="home-nav-link"><a href="/advancement">Give</a></div>
-                        <div class="home-nav-icon">
+                        <div class="home-nav-link right"><a href="/advancement">Give</a></div>
+                        <!-- <div class="home-nav-icon">
                             <a href="#"><img src="./images/icons/user.png" alt="Links"></a>
-                        </div>
+                        </div> -->
                         <div class="home-nav-icon">
-                            <a href="#"><img src="./images/icons/search.png" alt="Search"></a>
+                            <img id="home-nav-search" src="./images/icons/search-light.png" alt="Search">
                         </div>
                     </div>
                 </nav>
+                <div id="search-modal" class="search-modal">
+                    <div class="search-modal-body">
+                        <button id="close-modal" class="close-modal">&times;</button>
+                        <form role="search" method="get" class="search-container" action="/x91">
+                            <input type="search" id="search-input" class="search-input" placeholder="What are you looking for?" value="" name="keyword" autocomplete="off">
+                            <img id="search-icon-clear" class="search-icon-clear" src="./images/icons/close.png" alt="clear search">
+                            <div>|</div>
+                            <input type="submit" class="search-icon-submit" value="Search">
+                        </form>
+                        <div class="popular-search">
+                            <h2>Popular Searches</h2>
+                            <div class="popular-search-items">
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Majors and Programs</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Admission</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Schedule a Visit</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Financial Aid</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Campus Calendar</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Campus Map</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Fast Facts</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Employment</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Search People</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Tuition + Fees</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">International Programs</div>
+                                </a>
+                                <a href="#" class="popular-search-item">
+                                    <img src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                    <div class="popular-search-title">Registrar</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
             <div class="home-media-container">
-                <img src="./images/header.jpg">
+                <img src="./images/site/header.jpg">
                 <!-- <video autoplay muted loop playsinline>
                     <source src="./video/wofford-campus.webm" type="video/webm"> Your browser does not support the video tag.
                 </video> -->
@@ -61,7 +128,7 @@
                             <div class="cta-item-link">Visit &rarr;</div>
                         </a>
                     </div>
-                    <div class="px-10 cta-item">
+                    <div class="cta-item">
                         <a href="/admission/apply">
                             <div class="cta-item-text">Think that Wofford is the place for you? Submit your application here.</div>
                             <div class="cta-item-link">Apply &rarr;</div>
@@ -85,20 +152,22 @@
         </section>
         <!-- News stories section -->
         <section class="home-section-news">
-            <div class="news-story prev">
-                <img data-news-image src="./images/news/news-01.jpg" alt="story title">
-                <div class="arrow">&larr;</div>
-            </div>
-            <div class="news-story current">
-                <img id="mainImage" data-news-image src="./images/news/news-02.jpg" alt="story title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="story-body">
-                    <div class="story-title">Story Title</div>
-                    <div class="story-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, tempora.</div>
+            <div class="news-stories">
+                <div class="news-story prev">
+                    <img data-news-image src="./images/news/news-01.jpg" alt="story title">
                 </div>
-            </div>
-            <div class="news-story next">
-                <img data-news-image src="./images/news/news-03.jpg" alt="story title">
-                <div class="arrow">&rarr;</div>
+                <div class="news-story current">
+                    <img data-news-image src="./images/news/news-02.jpg" alt="story title">
+                    <div class="story-body">
+                        <div class="story-title">Story Title</div>
+                        <div class="story-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, tempora.</div>
+                    </div>
+                </div>
+                <div class="news-story next">
+                    <img data-news-image src="./images/news/news-03.jpg" alt="story title">
+                </div>
+                <div class="arrow prev-arrow">&larr;</div>
+                <div class="arrow next-arrow">&rarr;</div>
             </div>
         </section>
         <!-- News archive section -->

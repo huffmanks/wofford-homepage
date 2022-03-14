@@ -2,11 +2,10 @@
     - Update fonts
     - Mobile responsive
 2. Navbar
-    - Search modal
     - Nav links modal
+    - Mobile menu
 3. CTA section
     - Refactor spacing
     - Gradient from video to background
 4. News story section
-    - Toggle rotators
-    - Does clicking story go to story??
+    - Does clicking story go to story?? If so need to add link to story.
