@@ -15,8 +15,8 @@
         <section class="home-section-nav-media">
             <header class="home-header">
                 <nav class="home-nav">
-                    <div class="home-nav-items">
-                        <button id="home-mobile-menu" type="button" class="home-mobile-menu">
+                    <div class="home-nav-menu">
+                        <button id="home-mobile-toggle-menu" type="button" class="home-mobile-toggle-menu">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -24,20 +24,33 @@
                         <div class="home-nav-logo">
                             <a href="/"><img src="./images/site/logo.png" alt="Wofford logo"></a>
                         </div>
-                        <div class="home-nav-link"><a href="/about">About</a></div>
-                        <div class="home-nav-link">
+                        <div class="home-nav-item"><a href="/about">About</a>
+                            <div class="home-nav-sub-menu">
+                                <div class="home-nav-sub-menu-container">
+                                    <div class="home-nav-sub-item"><a href="/about">About Home</a></div>
+                                    <div class="home-nav-sub-item"><a href="/about/jedi">JEDI</a></div>
+                                    <div class="home-nav-sub-item"><a href="/about/news">News</a></div>
+                                    <div class="home-nav-sub-item"><a href="/about/office-of-equity-diversity-and-inclusion">Office of Equity, Diversity and Inclusion</a></div>
+                                    <div class="home-nav-sub-item"><a href="/about/the-resilience-project">The Resilience Project</a></div>
+                                    <div class="home-nav-sub-item"><a href="/about/links-resources">Links + Resources</a></div>
+                                    <div class="home-nav-sub-item"><a href="/about/office-of-the-president">Office of the President</a></div>
+                                    <div class="home-nav-sub-item"><a href="https://www.wofford.edu/about/fast-facts">Fast Facts</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-nav-item">
                             <a href="/academics">Academics</a>
                         </div>
-                        <div class="home-nav-link">
+                        <div class="home-nav-item">
                             <a href="/admission">Admission</a>
                         </div>
-                        <div class="home-nav-link">
+                        <div class="home-nav-item">
                             <a href="/student-experiences">Students</a>
                         </div>
-                        <div class="home-nav-link">
+                        <div class="home-nav-item">
                             <a href="https://woffordterriers.com">Athletics</a>
                         </div>
-                        <div class="home-nav-link right"><a href="/advancement">Give</a></div>
+                        <div class="home-nav-item right"><a href="/advancement">Give</a></div>
                         <!-- <div class="home-nav-icon">
                             <a href="#"><img src="./images/icons/user.png" alt="Links"></a>
                         </div> -->
@@ -153,26 +166,34 @@
         <!-- News stories section -->
         <section class="home-section-news">
             <div class="news-stories">
-                <div class="news-story prev">
-                    <img data-news-image src="./images/news/news-01.jpg" alt="story title">
-                </div>
-                <div class="news-story current">
-                    <img data-news-image src="./images/news/news-02.jpg" alt="story title">
+                <a href="#" class="news-story prev">
+                    <img src="./images/news/news-01.jpg" alt="story title 1">
                     <div class="story-body">
-                        <div class="story-title">Story Title</div>
-                        <div class="story-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, tempora.</div>
+                        <div class="story-title">Story Title 1</div>
+                        <div class="story-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio atque nulla quidem, perspiciatis recusandae in!</div>
                     </div>
-                </div>
-                <div class="news-story next">
-                    <img data-news-image src="./images/news/news-03.jpg" alt="story title">
-                </div>
+                </a>
+                <a href="#" class="news-story current">
+                    <img src="./images/news/news-02.jpg" alt="story title 2">
+                    <div class="story-body">
+                        <div class="story-title">Story Title 2</div>
+                        <div class="story-subtitle">Lorem ipsum dolor sit amet.</div>
+                    </div>
+                </a>
+                <a href="#" class="news-story next">
+                    <img src="./images/news/news-03.jpg" alt="story title 3">
+                    <div class="story-body">
+                        <div class="story-title">Story Title 3</div>
+                        <div class="story-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, provident?</div>
+                    </div>
+                </a>
                 <div class="arrow prev-arrow">&larr;</div>
                 <div class="arrow next-arrow">&rarr;</div>
             </div>
         </section>
         <!-- News archive section -->
         <section class="home-section-news-archive">
-            <div class="news-archive-text">Read more stories from the <a href="#">news archive</a>.</div>
+            <div class="news-archive-text">Read more stories from the <a href="/about/news">news archive</a>.</div>
         </section>
         <!-- Give section -->
         <section class="home-section-give">

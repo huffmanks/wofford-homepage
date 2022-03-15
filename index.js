@@ -1,31 +1,49 @@
 // News story images
-const imageEls = Array.from(document.querySelectorAll('[data-news-image]'))
+const newsStoriesContainer = document.querySelector('.news-stories')
+const newsStories = Array.from(document.querySelectorAll('.news-story'))
 const prevButton = document.querySelector('.prev-arrow')
 const nextButton = document.querySelector('.next-arrow')
-let images = imageEls.map((img) => img.src)
 
-function loadImages() {
-    imageEls.forEach((img, i) => {
-        img.src = images[i]
-    })
+let story = newsStories.map((story) => story)
+
+function prevStory() {
+    const [prev, main, next] = story
+    story = [next, prev, main]
+
+    newsStoriesContainer.insertAdjacentElement('afterbegin', main)
+    newsStoriesContainer.insertAdjacentElement('afterbegin', prev)
+    newsStoriesContainer.insertAdjacentElement('afterbegin', next)
+
+    next.classList.add('prev')
+    next.classList.remove('next')
+
+    prev.classList.add('current')
+    prev.classList.remove('prev')
+
+    main.classList.add('next')
+    main.classList.remove('current')
 }
 
-function prevImage() {
-    const [prev, main, next] = images
-    images = [next, prev, main]
+function nextStory() {
+    const [prev, main, next] = story
+    story = [main, next, prev]
 
-    loadImages()
+    newsStoriesContainer.insertAdjacentElement('afterbegin', prev)
+    newsStoriesContainer.insertAdjacentElement('afterbegin', next)
+    newsStoriesContainer.insertAdjacentElement('afterbegin', main)
+
+    next.classList.add('current')
+    next.classList.remove('next')
+
+    prev.classList.add('next')
+    prev.classList.remove('prev')
+
+    main.classList.add('prev')
+    main.classList.remove('current')
 }
 
-function nextImage() {
-    const [prev, main, next] = images
-    images = [next, prev, main]
-
-    loadImages()
-}
-
-prevButton.addEventListener('click', prevImage)
-nextButton.addEventListener('click', nextImage)
+prevButton.addEventListener('click', prevStory)
+nextButton.addEventListener('click', nextStory)
 
 // Search modal
 const homeNavSearchBtn = document.querySelector('#home-nav-search')
