@@ -63,6 +63,10 @@ img {
     user-select: none;
     transition: color 0.15s ease-in-out, background-color 0.3s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.modal-open {
+    overflow: hidden;
+}
 /* End of general styles */
 /* REMOVE ^ */
 
@@ -225,7 +229,7 @@ img {
 }
 
 /* SEARCH - Search modal */
-.search-modal {
+.home-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -236,13 +240,14 @@ img {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
+    z-index: 200;
 }
 
-.search-modal.open {
+.home-modal.open {
     display: flex;
 }
 
-.search-modal-body {
+.home-modal-body {
     width: min(1200px, 90vw);
     margin: 0 auto;
     padding: 20px;
@@ -851,7 +856,7 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 @media (max-width: 400px) {
-    .search-modal-body {
+    .home-modal-body {
         padding: 20px 10px;
     }
 
