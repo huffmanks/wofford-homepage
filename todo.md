@@ -3,6 +3,9 @@
 2. Scrollbar
     - In Firefox when scrollbar is actively being clicked the thumb turns yellow
 3. Nav Menu
-    - Create new nav menu
-4. IAMA
+    - Finish nav menu
+        - Admission, Students, Athletics
+        - Tab content areas
+    - Mobile version
+4. IAMA?
     - staff directory

@@ -1,10 +1,14 @@
+const videoEl = document.querySelector('video.home-media-item')
+
 // Modal
 const modalEls = Array.from(document.querySelectorAll('[data-modal]'))
-const closeModalBtns = Array.from(document.querySelectorAll('[data-close-modal]'))
+const openModalBtns = Array.from(document.querySelectorAll('[data-modal-open]'))
+const closeModalBtns = Array.from(document.querySelectorAll('[data-modal-close]'))
 
-// Search modal
-const homeNavSearchBtn = document.querySelector('#home-nav-search')
-const searchModal = document.querySelector('#search-modal')
+// Tab
+const tabContainers = Array.from(document.querySelectorAll('[data-tab]'))
+
+// Search input
 const searchInput = document.querySelector('#search-input')
 const searchIconClearBtn = document.querySelector('#search-icon-clear')
 
@@ -35,10 +39,27 @@ window.addEventListener('load', getScreenSize)
 window.addEventListener('resize', getScreenSize)
 
 // Modal
+openModalBtns.map((button) => {
+    button.addEventListener('click', () => {
+        if (button.nextElementSibling.matches('[data-modal]')) {
+            document.body.classList.add('modal-open')
+            button.nextElementSibling.classList.add('open')
+
+            if (videoEl) {
+                videoEl.pause()
+            }
+        }
+    })
+})
+
 closeModalBtns.map((button) => {
     button.addEventListener('click', () => {
         document.body.classList.remove('modal-open')
-        button.closest('.home-modal').classList.remove('open')
+        button.closest('[data-modal]').classList.remove('open')
+
+        if (videoEl) {
+            videoEl.play()
+        }
     })
 })
 
@@ -47,16 +68,51 @@ modalEls.map((modal) => {
         if (e.target === modal) {
             document.body.classList.remove('modal-open')
             modal.classList.remove('open')
+
+            if (videoEl) {
+                videoEl.play()
+            }
         }
     })
 })
 
-// Search modal
-homeNavSearchBtn.addEventListener('click', () => {
-    document.body.classList.add('modal-open')
-    searchModal.classList.add('open')
+// Tab
+tabContainers.map((tabs) => {
+    const tabBtns = Array.from(tabs.querySelectorAll('[data-tab-button]'))
+    const tabEls = Array.from(tabs.querySelectorAll('[data-tab-content]'))
+
+    document.addEventListener('DOMContentLoaded', () => {
+        tabs.querySelector('[data-tab-button="1"]').click()
+    })
+
+    tabBtns.map((button) => {
+        button.addEventListener('click', () => {
+            const tabNumber = button.dataset.tabButton
+            const tabContent = tabs.querySelector(`[data-tab-content="${tabNumber}"]`)
+
+            const prevActiveBtn = tabBtns.filter((btn) => {
+                return btn.classList.contains('active')
+            })
+
+            if (prevActiveBtn.length > 0 && prevActiveBtn[0] !== button) {
+                prevActiveBtn[0].classList.remove('active')
+            }
+
+            const prevActiveTab = tabEls.filter((tab) => {
+                return tab.classList.contains('show')
+            })
+
+            if (prevActiveTab.length > 0) {
+                prevActiveTab[0].classList.remove('show')
+            }
+
+            button.classList.add('active')
+            tabContent.classList.add('show')
+        })
+    })
 })
 
+// Search input
 searchIconClearBtn.addEventListener('click', () => {
     searchInput.value = ''
 })
