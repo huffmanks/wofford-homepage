@@ -89,40 +89,26 @@ homeNavItems.map((item) => {
 // News story images
 let story = newsStories.map((story) => story)
 
-function prevStory() {
+const prevStory = () => {
     const [prev, main, next] = story
     story = [next, prev, main]
 
-    newsStoriesContainer.insertAdjacentElement('afterbegin', main)
-    newsStoriesContainer.insertAdjacentElement('afterbegin', prev)
-    newsStoriesContainer.insertAdjacentElement('afterbegin', next)
+    newsStoriesContainer.append(...story)
 
-    next.classList.add('prev')
-    next.classList.remove('next')
-
-    prev.classList.add('current')
-    prev.classList.remove('prev')
-
-    main.classList.add('next')
-    main.classList.remove('current')
+    next.classList.replace('next', 'prev')
+    prev.classList.replace('prev', 'current')
+    main.classList.replace('current', 'next')
 }
 
-function nextStory() {
+const nextStory = () => {
     const [prev, main, next] = story
     story = [main, next, prev]
 
-    newsStoriesContainer.insertAdjacentElement('afterbegin', prev)
-    newsStoriesContainer.insertAdjacentElement('afterbegin', next)
-    newsStoriesContainer.insertAdjacentElement('afterbegin', main)
+    newsStoriesContainer.append(...story)
 
-    next.classList.add('current')
-    next.classList.remove('next')
-
-    prev.classList.add('next')
-    prev.classList.remove('prev')
-
-    main.classList.add('prev')
-    main.classList.remove('current')
+    next.classList.replace('next', 'current')
+    prev.classList.replace('prev', 'next')
+    main.classList.replace('current', 'prev')
 }
 
 prevButton.addEventListener('click', prevStory)

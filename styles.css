@@ -1,14 +1,3 @@
-/* UPDATE */
-/*
-# Fonts
-    -Nav links
-    -CTA links
-    -Tagline
-    -Story title
-    -Event date
-    -Event title
-*/
-
 /* General styles */
 /* These can be removed */
 *,
@@ -69,6 +58,11 @@ img {
 }
 /* End of general styles */
 /* REMOVE ^ */
+
+@font-face {
+    font-family: 'Poynter';
+    src: url('./fonts/poynter-regular.ttf') format('truetype');
+}
 
 /* Main */
 .home-main {
@@ -422,7 +416,7 @@ input[type='search']::-webkit-search-cancel-button {
 
 .tagline-heading {
     margin-bottom: 5px;
-    font-family: serif;
+    font-family: 'Poynter', serif;
     font-size: 24px;
 }
 
@@ -475,9 +469,14 @@ input[type='search']::-webkit-search-cancel-button {
     font-weight: 400;
 }
 
+.news-story.current {
+    animation: storyFadeIn 0.4s ease-in-out;
+}
+
 .news-story.prev,
 .news-story.next {
     pointer-events: none;
+    animation: storyFadeIn 1.2s ease-in-out;
 }
 
 .news-story.prev {
@@ -656,6 +655,16 @@ input[type='search']::-webkit-search-cancel-button {
 .wofford-scroll {
     scrollbar-width: thin;
     scrollbar-color: #d5d7d8 #8a6e4b;
+}
+
+@keyframes storyFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Media queries */
