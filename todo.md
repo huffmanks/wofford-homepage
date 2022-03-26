@@ -5,7 +5,6 @@
 3. Nav Menu
     - Finish nav menu
         - Admission, Students, Athletics
-        - Tab content areas
-    - Mobile version
+        - Tab content areas - Academics and above
 4. IAMA?
     - staff directory

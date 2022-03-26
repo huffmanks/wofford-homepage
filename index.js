@@ -29,7 +29,7 @@ let screenSize
 const getScreenSize = () => {
     screenSize = window.innerWidth
 
-    if (screenSize > 861) {
+    if (screenSize > 860) {
         homeMobileToggleMenu.classList.remove('open')
         homeNavMenu.classList.remove('show')
     }
@@ -43,7 +43,7 @@ openModalBtns.map((button) => {
     button.addEventListener('click', () => {
         if (button.nextElementSibling.matches('[data-modal]')) {
             document.body.classList.add('modal-open')
-            button.nextElementSibling.classList.add('open')
+            button.nextElementSibling.classList.toggle('open')
 
             if (videoEl) {
                 videoEl.pause()
@@ -82,7 +82,11 @@ tabContainers.map((tabs) => {
     const tabEls = Array.from(tabs.querySelectorAll('[data-tab-content]'))
 
     document.addEventListener('DOMContentLoaded', () => {
-        tabs.querySelector('[data-tab-button="1"]').click()
+        tabBtnActive = tabs.querySelector('[data-tab-button="1"]')
+        tabContentActive = tabs.querySelector('[data-tab-content="1"]')
+
+        tabBtnActive.classList.add('active')
+        tabContentActive.classList.add('show')
     })
 
     tabBtns.map((button) => {
@@ -125,20 +129,23 @@ homeMobileToggleMenu.addEventListener('click', () => {
 })
 
 homeNavItems.map((item) => {
-    item.addEventListener('click', (e) => {
-        if (screenSize < 861) {
-            e.preventDefault()
-        }
-
-        const prevActive = homeNavItems.filter((i) => {
+    item.addEventListener('click', () => {
+        const prevActiveItem = homeNavItems.filter((i) => {
             return i.classList.contains('active')
         })
 
-        if (prevActive.length > 0 && prevActive[0] !== item) {
-            prevActive[0].classList.remove('active')
+        if (prevActiveItem.length > 0 && prevActiveItem[0] !== item) {
+            prevActiveItem[0].classList.remove('active')
+            prevActiveItem[0].querySelector('[data-modal]').classList.remove('open')
         }
 
         item.classList.toggle('active')
+
+        console.log(item.offsetTop)
+
+        const offsetScroll = item.classList.contains('active') ? item.offsetTop - 20 : item.offsetTop
+
+        homeNavMenu.scrollTo({ top: item.offsetTop - 30, behavior: 'smooth' })
     })
 })
 
