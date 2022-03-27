@@ -1,76 +1,42 @@
-/* General styles */
-/* These can be removed */
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: proxima-nova, sans-serif;
-}
-
-a {
-    background-color: transparent;
-    color: #8a6e4b;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.6s ease;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.btn {
-    display: inline-block;
-    margin-bottom: 0;
-    padding: 0.375rem 1.5rem;
-    background-color: #8a6e4b;
-    color: #fff;
-    border: 1px solid transparent;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-
-    font-size: 0.9rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-align: center;
-    vertical-align: middle;
-
-    cursor: pointer;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: color 0.15s ease-in-out, background-color 0.3s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-/* End of general styles */
-/* REMOVE ^ */
-
 @font-face {
     font-family: 'Poynter';
     src: url('./fonts/poynter-regular.ttf') format('truetype');
+    font-display: swap;
 }
 
-/* Main */
-.home-main {
+body {
     background-color: #282829;
     color: #fff;
-    font-family: proxima-nova, sans-serif;
+    font-family: 'proxima-nova', sans-serif;
     font-size: 16px;
-    line-height: normal;
+    line-height: 1;
 }
 
-.home-main img {
+img {
     margin-bottom: 0;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 5px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px 2px rgb(113, 90, 62);
+    border-radius: 5px;
+}
+
+a:hover,
+a:focus,
+a:active {
+    /* filter: brightness(0.7); */
+}
+
+input[type='search'] {
+    font-size: 13px;
+    line-height: inherit;
+    color: #282829;
+    background-color: inherit;
+    background-clip: initial;
+    border: none;
+    padding: 0;
 }
 
 /* Nav and media section */
@@ -187,10 +153,10 @@ img {
 }
 
 .home-nav-link {
+    display: block;
     color: #fff;
     font-weight: normal;
     text-transform: uppercase;
-    cursor: pointer;
 }
 
 .home-nav-menu .home-nav-link {
@@ -279,7 +245,7 @@ button.modal-close:hover {
 .tab-button-group,
 .home-tabs {
     max-height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .tab-button-group {
     padding: 0 40px 0 20px;
@@ -293,7 +259,9 @@ button.modal-close:hover {
 }
 
 .tab-button {
+    display: block;
     padding: 15px;
+    color: #282829;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -318,6 +286,10 @@ button.modal-close:hover {
     font-size: 20px;
 }
 
+.tab-button-description {
+    font-weight: normal;
+}
+
 .tab-content {
     display: none;
     padding-right: 40px;
@@ -333,9 +305,14 @@ button.modal-close:hover {
     gap: 20px;
 }
 
+.tab-item {
+    display: flex;
+    flex-direction: column;
+}
+
 .tab-link,
 .tab-sub-link {
-    display: block;
+    width: fit-content;
     color: #282829;
 }
 
@@ -354,6 +331,8 @@ button.modal-close:hover {
 }
 
 .tab-sub-item {
+    display: flex;
+    flex-direction: column;
     margin: 10px 0;
 }
 
@@ -381,15 +360,17 @@ button.modal-close:hover {
 }
 
 .search-input {
-    flex: 1;
-    max-width: 100%;
+    width: 100%;
+    padding: 0;
     background-color: #eceded;
+    font-size: 13px;
     border: none;
     outline: none;
 }
 
 .search-icon-clear {
     width: 14px;
+    margin-left: auto;
     cursor: pointer;
 }
 
@@ -426,7 +407,7 @@ input[type='search']::-webkit-search-cancel-button {
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 30px;
     max-height: 240px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .popular-search-item {
@@ -466,22 +447,29 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .cta-container {
-    width: 90%;
+    width: min(1600px, 90%);
     margin: 0 auto;
 }
 
 .cta-items {
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+}
+
+.cta-items::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-bottom: solid 2px #6d6d6d;
 }
 
 .cta-item {
     padding-bottom: 40px;
     border-bottom: solid 2px #6d6d6d;
-}
-
-.cta-item:nth-of-type(2) {
-    padding-left: 20px;
-    padding-right: 20px;
+    z-index: 10;
 }
 
 .cta-item:hover {
@@ -490,16 +478,20 @@ input[type='search']::-webkit-search-cancel-button {
 
 .cta-item-link {
     display: block;
+    max-width: 270px;
     color: #fff;
     font-weight: normal;
 }
 
 .cta-description {
+    font-size: 14px;
     margin-bottom: 8px;
 }
 
 .cta-link-text {
     font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
     text-transform: uppercase;
 }
 
@@ -564,7 +556,9 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .news-story {
-    display: block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     position: relative;
     color: #fff;
     font-weight: 400;
@@ -696,7 +690,6 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .event-link {
-    display: block;
     font-weight: normal;
     text-decoration: underline;
 }
@@ -733,6 +726,7 @@ input[type='search']::-webkit-search-cancel-button {
 .social-link {
     display: block;
     width: 45px;
+    border-radius: 50%;
 }
 
 /* Utilities */
@@ -801,19 +795,19 @@ input[type='search']::-webkit-search-cancel-button {
     .tab-items {
         grid-template-columns: 1fr;
     }
+
     .cta-items {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-items::after {
+        display: none;
     }
 
     .cta-item {
-        margin-bottom: 20px;
+        width: max-content;
         padding-bottom: 20px;
-        border-bottom: solid 2px #6d6d6d;
-    }
-
-    .cta-item:nth-of-type(2) {
-        padding-left: 0;
-        padding-right: 0;
     }
 
     .home-section-events {
@@ -844,11 +838,14 @@ input[type='search']::-webkit-search-cancel-button {
         padding: 100px 75px 75px;
         background-color: #333;
         transition: all 0.6s ease-in-out;
-        overflow-y: scroll;
     }
 
     .home-nav-menu.show {
         top: 0;
+    }
+
+    .home-nav-menu:not(.show) {
+        overflow: hidden;
     }
 
     .home-nav-menu-secondary {
@@ -865,12 +862,13 @@ input[type='search']::-webkit-search-cancel-button {
         justify-content: space-between;
         align-items: center;
         gap: 15px;
+        width: 100%;
         font-size: 26px;
     }
 
     .home-nav-menu .home-nav-item.active .home-nav-link {
         background-color: transparent;
-        backdrop-filter: blur(0);
+        backdrop-filter: none;
     }
 
     .home-nav-menu .home-nav-link::after {
@@ -905,7 +903,7 @@ input[type='search']::-webkit-search-cancel-button {
     }
 
     .home-tab-container {
-        padding: 0 0 0 20px;
+        padding: 0;
     }
 
     .tab-body {
@@ -913,14 +911,26 @@ input[type='search']::-webkit-search-cancel-button {
     }
 
     .tab-button-group {
-        max-height: 100%;
-        padding: 0;
-        overflow-y: hidden;
+        /* max-height: 100%; */
+        margin-bottom: 20px;
+        padding: 0 10px;
     }
 
-    .tab-button:hover,
     .tab-button.active {
+        background-color: transparent;
+    }
+
+    .tab-button:hover {
         background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .tab-button,
+    .tab-button.active .tab-title {
+        color: #fff;
+    }
+
+    .tab-button.active:hover .tab-title {
+        color: #8a6e4b;
     }
 
     .news-stories {
@@ -973,7 +983,6 @@ input[type='search']::-webkit-search-cancel-button {
     }
 
     .home-nav-menu {
-        padding: 75px 60px 60px;
         padding: 75px 30px 60px 60px;
     }
 
@@ -1035,19 +1044,6 @@ input[type='search']::-webkit-search-cancel-button {
         font-size: 14px;
     }
 
-    .search-container {
-        justify-content: space-between;
-    }
-
-    .search-input {
-        flex: 0;
-    }
-
-    .search-container > div,
-    .search-icon-clear {
-        display: none;
-    }
-
     .popular-search {
         padding: 20px 0;
     }
@@ -1080,6 +1076,17 @@ input[type='search']::-webkit-search-cancel-button {
 
     .home-nav-icon {
         width: 15px;
+    }
+}
+
+@media (max-width: 315px) {
+    .search-container > div,
+    .search-icon-clear {
+        display: none;
+    }
+
+    .search-icon-submit {
+        margin-left: auto;
     }
 }
 

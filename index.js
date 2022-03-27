@@ -56,6 +56,7 @@ closeModalBtns.map((button) => {
     button.addEventListener('click', () => {
         document.body.classList.remove('modal-open')
         button.closest('[data-modal]').classList.remove('open')
+        button.closest('.home-nav-item').classList.remove('active')
 
         if (videoEl) {
             videoEl.play()
@@ -68,6 +69,7 @@ modalEls.map((modal) => {
         if (e.target === modal) {
             document.body.classList.remove('modal-open')
             modal.classList.remove('open')
+            modal.closest('.home-nav-item').classList.remove('active')
 
             if (videoEl) {
                 videoEl.play()
@@ -90,28 +92,32 @@ tabContainers.map((tabs) => {
     })
 
     tabBtns.map((button) => {
-        button.addEventListener('click', () => {
-            const tabNumber = button.dataset.tabButton
-            const tabContent = tabs.querySelector(`[data-tab-content="${tabNumber}"]`)
+        button.addEventListener('click', (e) => {
+            if (screenSize > 860) {
+                e.preventDefault()
 
-            const prevActiveBtn = tabBtns.filter((btn) => {
-                return btn.classList.contains('active')
-            })
+                const tabNumber = button.dataset.tabButton
+                const tabContent = tabs.querySelector(`[data-tab-content="${tabNumber}"]`)
 
-            if (prevActiveBtn.length > 0 && prevActiveBtn[0] !== button) {
-                prevActiveBtn[0].classList.remove('active')
+                const prevActiveBtn = tabBtns.filter((btn) => {
+                    return btn.classList.contains('active')
+                })
+
+                if (prevActiveBtn.length > 0 && prevActiveBtn[0] !== button) {
+                    prevActiveBtn[0].classList.remove('active')
+                }
+
+                const prevActiveTab = tabEls.filter((tab) => {
+                    return tab.classList.contains('show')
+                })
+
+                if (prevActiveTab.length > 0) {
+                    prevActiveTab[0].classList.remove('show')
+                }
+
+                button.classList.add('active')
+                tabContent.classList.add('show')
             }
-
-            const prevActiveTab = tabEls.filter((tab) => {
-                return tab.classList.contains('show')
-            })
-
-            if (prevActiveTab.length > 0) {
-                prevActiveTab[0].classList.remove('show')
-            }
-
-            button.classList.add('active')
-            tabContent.classList.add('show')
         })
     })
 })
@@ -129,21 +135,23 @@ homeMobileToggleMenu.addEventListener('click', () => {
 })
 
 homeNavItems.map((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
         const prevActiveItem = homeNavItems.filter((i) => {
             return i.classList.contains('active')
         })
 
-        if (prevActiveItem.length > 0 && prevActiveItem[0] !== item) {
-            prevActiveItem[0].classList.remove('active')
-            prevActiveItem[0].querySelector('[data-modal]').classList.remove('open')
+        if (prevActiveItem.length > 0) {
+            prevActiveItem.map((prevItem) => {
+                if (prevItem !== item) {
+                    prevItem.classList.remove('active')
+                    prevItem.querySelector('[data-modal]').classList.remove('open')
+                }
+            })
         }
 
-        item.classList.toggle('active')
-
-        console.log(item.offsetTop)
-
-        const offsetScroll = item.classList.contains('active') ? item.offsetTop - 20 : item.offsetTop
+        if (e.target === item.children[0] && item.children[0].hasAttribute('data-modal-open')) {
+            item.classList.toggle('active')
+        }
 
         homeNavMenu.scrollTo({ top: item.offsetTop - 30, behavior: 'smooth' })
     })

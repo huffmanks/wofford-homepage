@@ -5,265 +5,265 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://use.typekit.net/sbo3pwk.css" rel="stylesheet">
+    <link href="https://use.typekit.net/sbo3pwk.css" rel="preload" as="font">
+    <link rel="stylesheet" href="wofford-current.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="styles.css">
     <title>Homepage</title>
 </head>
 
 <body>
-    <main class="home-main">
-        <!-- Nav and media section -->
-        <section class="home-section-nav-media">
-            <header class="home-header">
-                <div class="home-nav-container">
-                    <nav class="home-nav">
-                        <button id="home-mobile-toggle-menu" type="button" class="home-mobile-toggle-menu">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="home-nav-logo">
-                            <a class="home-nav-link" href="/">
-                                <!-- <img src="./images/site/logo.png" alt="Wofford logo"> -->
-                                <div>Wofford</div>
-                                <div>College</div>
-                            </a>
-                        </div>
-                        <div id="home-nav-menu" class="home-nav-menu">
-                            <div class="home-nav-item">
-                                <div class="home-nav-link" data-modal-open>About</div>
-                                <div class="home-modal" data-modal>
-                                    <div class="home-modal-container home-modal-container-lg">
-                                        <button class="modal-close" data-modal-close>&times;</button>
-                                        <div class="home-tab-container" data-tab>
-                                            <div class="tab-header">
-                                                <div class="tab-heading">About</div>
-                                                <div class="tab-heading">Getting Started</div>
+    <!-- Nav and media section -->
+    <section class="home-section-nav-media">
+        <header class="home-header">
+            <div class="home-nav-container">
+                <nav class="home-nav">
+                    <button id="home-mobile-toggle-menu" type="button" class="home-mobile-toggle-menu" aria-label="toggle mobile menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="home-nav-logo">
+                        <a class="home-nav-link" href="/">
+                            <!-- <img style="width: 130px;" src="./images/site/logo.png" alt="Wofford logo"> -->
+                            <div>Wofford</div>
+                            <div>College</div>
+                        </a>
+                    </div>
+                    <div id="home-nav-menu" class="home-nav-menu">
+                        <div class="home-nav-item">
+                            <button class="home-nav-link" data-modal-open>About</button>
+                            <div class="home-modal" data-modal>
+                                <div class="home-modal-container home-modal-container-lg">
+                                    <button class="modal-close" data-modal-close>&times;</button>
+                                    <div class="home-tab-container" data-tab>
+                                        <div class="tab-header">
+                                            <div class="tab-heading">About</div>
+                                            <div class="tab-heading">Getting Started</div>
+                                        </div>
+                                        <div class="tab-body">
+                                            <div class="tab-button-group wofford-scroll">
+                                                <a href="/about" class="tab-button" data-tab-button="1">
+                                                    <div class="tab-title">About</div>
+                                                    <div class="tab-button-description">Find out more about Wofford.</div>
+                                                </a>
+                                                <a href="/about/fast-facts" class="tab-button" data-tab-button="2">
+                                                    <div class="tab-title">Fast Facts</div>
+                                                    <div class="tab-button-description">A quick look at what Wofford is all about.</div>
+                                                </a>
+                                                <a href="/about/news" class="tab-button" data-tab-button="3">
+                                                    <div class="tab-title">News</div>
+                                                    <div class="tab-button-description">Catch up on what&rsquo;s happening at Wofford.</div>
+                                                </a>
+                                                <a href="/about/office-of-equity-diversity-and-inclusion" class="tab-button" data-tab-button="4">
+                                                    <div class="tab-title">Office of Equity, Diversity and Inclusion</div>
+                                                    <div class="tab-button-description">Wofford recognizes diversity as a vital component of a high-quality education.</div>
+                                                </a>
+                                                <a href="/about/jedi" class="tab-button" data-tab-button="5">
+                                                    <div class="tab-title">JEDI</div>
+                                                    <div class="tab-button-description">Wofford will be a premier, innovative and distinctive national liberal arts college.</div>
+                                                </a>
+                                                <a href="/about/office-of-the-president" class="tab-button" data-tab-button="6">
+                                                    <div class="tab-title">Office of the President</div>
+                                                    <div class="tab-button-description">Dr. Nayef H. Samhat is Wofford&rsquo;s 11th president.</div>
+                                                </a>
+                                                <a href="/about/the-resilience-project" class="tab-button" data-tab-button="7">
+                                                    <div class="tab-title">The Resilience Project</div>
+                                                    <div class="tab-button-description">The Resilience Project is a collaborative effort between students, faculty, and staff.</div>
+                                                </a>
+                                                <a href="/about/links-resources" class="tab-button" data-tab-button="8">
+                                                    <div class="tab-title">Links + Resources</div>
+                                                    <div class="tab-button-description">Helpful links and resources for Wofford College.</div>
+                                                </a>
                                             </div>
-                                            <div class="tab-body">
-                                                <div class="tab-button-group wofford-scroll">
-                                                    <div class="tab-button" data-tab-button="1">
-                                                        <div class="tab-title">About</div>
-                                                        <div class="tab-button-description">Find out more about Wofford.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="2">
-                                                        <div class="tab-title">Fast Facts</div>
-                                                        <div class="tab-button-description">A quick look at what Wofford is all about.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="3">
-                                                        <div class="tab-title">News</div>
-                                                        <div class="tab-button-description">Catch up on what&rsquo;s happening at Wofford.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="4">
-                                                        <div class="tab-title">Office of Equity, Diversity and Inclusion</div>
-                                                        <div class="tab-button-description">Wofford recognizes diversity as a vital component of a high-quality education.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="5">
-                                                        <div class="tab-title">JEDI</div>
-                                                        <div class="tab-button-description">Wofford will be a premier, innovative and distinctive national liberal arts college.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="6">
-                                                        <div class="tab-title">Office of the President</div>
-                                                        <div class="tab-button-description">Dr. Nayef H. Samhat is Wofford&rsquo;s 11th president.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="7">
-                                                        <div class="tab-title">The Resilience Project</div>
-                                                        <div class="tab-button-description">The Resilience Project is a collaborative effort between students, faculty, and staff.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="8">
-                                                        <div class="tab-title">Links + Resources</div>
-                                                        <div class="tab-button-description">Helpful links and resources for Wofford College.</div>
+                                            <div class="home-tabs wofford-scroll">
+                                                <div class="tab-content" data-tab-content="1">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/fast-facts" class="tab-link">Fast Facts</a>
+                                                            <a href="/about/fast-facts/phi-beta-kappa" class="tab-sub-link">Phi Beta Kappa</a>
+                                                            <a href="/about/fast-facts/mission-statement" class="tab-sub-link">Mission Statement</a>
+                                                            <a href="/about/fast-facts/accreditation" class="tab-sub-link">Accreditation</a>
+                                                            <a href="/about/fast-facts/major-counts" class="tab-sub-link">Major Counts</a>
+                                                        </div>
+                                                        <div class="tab-item">
+                                                            <a href="/about/office-of-the-president" class="tab-link">Office of the President</a>
+                                                            <a href="/about/office-of-the-president/board-of-trustees" class="tab-sub-link">Board of Trustees</a>
+                                                            <a href="/about/office-of-the-president/presidents-cabinet" class="tab-sub-link">President&rsquo;s Cabinet</a>
+                                                            <a href="/about/office-of-the-president/staff" class="tab-sub-link">President&rsquo;s Staff</a>
+                                                            <a href="/about/office-of-the-president/biography-of-nayef-h-samhat" class="tab-sub-link">Biography of Nayef H. Samhat</a>
+                                                            <a href="https://indd.adobe.com/view/ee450ee5-0e2c-4025-a588-665f7b2dd374" target="_blank" class="tab-sub-link">President&rsquo;s Report</a>
+                                                            <a href="/about/office-of-the-president/the-presidents-home" class="tab-sub-link">The President&rsquo;s Home</a>
+                                                            <a href="/about/office-of-the-president/past-presidents" class="tab-sub-link">Past Presidents</a>
+                                                            <a href="/about/office-of-the-president/presidential-international-scholar" class="tab-sub-link">Presidential International Scholar</a>
+                                                            <a href="/advancement/hipp-center" class="tab-sub-link">The Hipp Center</a>
+                                                            <a href="/about/office-of-the-president/essays-papers-speeches" class="tab-sub-link">Essays, Papers + Speeches</a>
+                                                        </div>
+                                                        <a href="/history" class="tab-link">History</a>
+                                                        <a href="https://calendar.wofford.edu/" class="tab-link">Campus Calendar</a>
+                                                        <div class="tab-item">
+                                                            <a href="/about/jedi" class="tab-link">JEDI/Strategic Vision</a>
+                                                            <a href="/wofford.edu/documents/diversity-and-inclusion/vision-statement.pdf" target="_blank" class="tab-sub-link">Vision Statement</a>
+                                                            <a href="/about/jedi/the-committee" class="tab-sub-link">The Committee</a>
+                                                            <a href="/about/jedi/consultants" class="tab-sub-link">JEDI Consultants</a>
+                                                            <a href="/about/jedi/working-groups" class="tab-sub-link">Working Groups</a>
+                                                            <a href="/about/jedi/reports" class="tab-sub-link">Reports</a>
+                                                            <a href="/about/jedi/listening-sessions" class="tab-sub-link">Listening Sessions</a>
+                                                            <a href="/about/jedi/data-and-readings" class="tab-sub-link">Data and Readings</a>
+                                                            <a href="/about/jedi/student-researchers" class="tab-sub-link">Student Researchers</a>
+                                                            <a href="/about/jedi/qanda-with-jedi" class="tab-sub-link">Q&amp;A with JEDI</a>
+                                                        </div>
+                                                        <div class="tab-item">
+                                                            <a href="/about/news" class="tab-link">News + Wofford Today</a>
+                                                            <a href="/about/news/news-archives" class="tab-sub-link">News Archives</a>
+                                                            <a href="/about/news/wofford-today" class="tab-sub-link">Read Wofford Today</a>
+                                                            <a href="http://wofford.meritpages.com" target="_blank" class="tab-sub-link">Read Wofford's Merit Page</a>
+                                                            <a href="/about/news/media-center" class="tab-sub-link">Find media resources</a>
+                                                            <a href="https://connect.wofford.edu/mywofford/omc/forms/request.aspx" target="_blank" class="tab-sub-link">Tell us more</a>
+                                                            <a href="/about/news/partnerships" class="tab-sub-link">About our partners</a>
+                                                            <a href="https://calendar.wofford.edu" class="tab-sub-link">Campus Calendar</a>
+                                                            <div class="tab-sub-item">
+                                                                <div class="tab-sub-title">Social Media</div>
+                                                                <a class="tab-sub-link" href="https://www.facebook.com/woffordcollege">Facebook</a>
+                                                                <a class="tab-sub-link" href="https://www.instagram.com/woffordcollege">Instagram</a>
+                                                                <a class="tab-sub-link" href="https://twitter.com/woffordcollege">Twitter</a>
+                                                            </div>
+                                                            <a href="/about/news/news-staff" class="tab-sub-link">About our staff</a>
+                                                        </div>
+                                                        <div class="tab-item">
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion" class="tab-link">Office of Equity, Diversity and Inclusion</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/about" class="tab-sub-link">About</a>
+                                                            <a href="/wofford.edu/documents/diversity-and-inclusion/diversity-and-inclusion-brochure.pdf" target="_blank" class="tab-sub-link">Diversity and Inclusion Brochure</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/initiatives" class="tab-sub-link">Initiatives</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/lgbtqia-life" class="tab-sub-link">LGBTQIA Life</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/successes-and-milestones" class="tab-sub-link">Successes and Milestones</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/related-programs" class="tab-sub-link">Related Programs</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/student-recruitment" class="tab-sub-link">Student Recruitment</a>
+                                                            <a href="/administration/title-ix" class="tab-sub-link">Title IX</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/staff" class="tab-sub-link">Staff</a>
+                                                        </div>
+                                                        <div class="tab-item">
+                                                            <a href="/about/the-resilience-project" class="tab-link">The Resilience Project</a>
+                                                            <a href="/about/the-resilience-project/covid-19-stories" class="tab-sub-link">COVID-19 stories</a>
+                                                            <a href="/about/the-resilience-project/meditations" class="tab-sub-link">Meditations</a>
+                                                            <a href="https://wofford.co1.qualtrics.com/jfe/form/SV_8HOslWJVQ3mXrIF" target="_blank" class="tab-sub-link">Submit a COVID-19 story</a>
+                                                            <a href="http://connect.wofford.edu/myWofford/resilience/resilienceproject.aspx" target="_blank" class="tab-sub-link">Submit a Resilience Essay</a>
+                                                            <a href="https://connect.wofford.edu/myWofford/resilience/artUpload.aspx" target="_blank" class="tab-sub-link">Upload Art</a>
+                                                            <a href="/wofford.edu/documents/about/resilience-project/toolkit.pdf" target="_blank" class="tab-sub-link">Toolkit</a>
+                                                            <a href="https://www.instagram.com/woffordresilience/" target="_blank" class="tab-sub-link">Instagram</a>
+                                                        </div>
+                                                        <div class="tab-item">
+                                                            <a href="/about/links-resources" class="tab-link">Links + Resources</a>
+                                                            <a href="/links-resources/campus-calendar" class="tab-sub-link">Campus Calendar</a>
+                                                            <a href="/links-resources/campus-map" class="tab-sub-link">Campus Map</a>
+                                                            <a href="/privacypolicy" class="tab-sub-link">Privacy Policy</a>
+                                                            <a href="https://www.bkstr.com/woffordstore/home/en" class="tab-sub-link">Wofford Bookstore</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="home-tabs wofford-scroll">
-                                                    <div class="tab-content" data-tab-content="1">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/fast-facts" class="tab-link">Fast Facts</a>
-                                                                <a href="/about/fast-facts/phi-beta-kappa" class="tab-sub-link">Phi Beta Kappa</a>
-                                                                <a href="/about/fast-facts/mission-statement" class="tab-sub-link">Mission Statement</a>
-                                                                <a href="/about/fast-facts/accreditation" class="tab-sub-link">Accreditation</a>
-                                                                <a href="/about/fast-facts/major-counts" class="tab-sub-link">Major Counts</a>
-                                                            </div>
-                                                            <div class="tab-item">
-                                                                <a href="/about/office-of-the-president" class="tab-link">Office of the President</a>
-                                                                <a href="/about/office-of-the-president/board-of-trustees" class="tab-sub-link">Board of Trustees</a>
-                                                                <a href="/about/office-of-the-president/presidents-cabinet" class="tab-sub-link">President&rsquo;s Cabinet</a>
-                                                                <a href="/about/office-of-the-president/staff" class="tab-sub-link">President&rsquo;s Staff</a>
-                                                                <a href="/about/office-of-the-president/biography-of-nayef-h-samhat" class="tab-sub-link">Biography of Nayef H. Samhat</a>
-                                                                <a href="https://indd.adobe.com/view/ee450ee5-0e2c-4025-a588-665f7b2dd374" target="_blank" class="tab-sub-link">President&rsquo;s Report</a>
-                                                                <a href="/about/office-of-the-president/the-presidents-home" class="tab-sub-link">The President&rsquo;s Home</a>
-                                                                <a href="/about/office-of-the-president/past-presidents" class="tab-sub-link">Past Presidents</a>
-                                                                <a href="/about/office-of-the-president/presidential-international-scholar" class="tab-sub-link">Presidential International Scholar</a>
-                                                                <a href="/advancement/hipp-center" class="tab-sub-link">The Hipp Center</a>
-                                                                <a href="/about/office-of-the-president/essays-papers-speeches" class="tab-sub-link">Essays, Papers + Speeches</a>
-                                                            </div>
-                                                            <a href="/history" class="tab-link">History</a>
-                                                            <a href="https://calendar.wofford.edu/" class="tab-link">Campus Calendar</a>
-                                                            <div class="tab-item">
-                                                                <a href="/about/jedi" class="tab-link">JEDI/Strategic Vision</a>
-                                                                <a href="/wofford.edu/documents/diversity-and-inclusion/vision-statement.pdf" target="_blank" class="tab-sub-link">Vision Statement</a>
-                                                                <a href="/about/jedi/the-committee" class="tab-sub-link">The Committee</a>
-                                                                <a href="/about/jedi/consultants" class="tab-sub-link">JEDI Consultants</a>
-                                                                <a href="/about/jedi/working-groups" class="tab-sub-link">Working Groups</a>
-                                                                <a href="/about/jedi/reports" class="tab-sub-link">Reports</a>
-                                                                <a href="/about/jedi/listening-sessions" class="tab-sub-link">Listening Sessions</a>
-                                                                <a href="/about/jedi/data-and-readings" class="tab-sub-link">Data and Readings</a>
-                                                                <a href="/about/jedi/student-researchers" class="tab-sub-link">Student Researchers</a>
-                                                                <a href="/about/jedi/qanda-with-jedi" class="tab-sub-link">Q&amp;A with JEDI</a>
-                                                            </div>
-                                                            <div class="tab-item">
-                                                                <a href="/about/news" class="tab-link">News + Wofford Today</a>
-                                                                <a href="/about/news/news-archives" class="tab-sub-link">News Archives</a>
-                                                                <a href="/about/news/wofford-today" class="tab-sub-link">Read Wofford Today</a>
-                                                                <a href="http://wofford.meritpages.com" target="_blank" class="tab-sub-link">Read Wofford's Merit Page</a>
-                                                                <a href="/about/news/media-center" class="tab-sub-link">Find media resources</a>
-                                                                <a href="https://connect.wofford.edu/mywofford/omc/forms/request.aspx" target="_blank" class="tab-sub-link">Tell us more</a>
-                                                                <a href="/about/news/partnerships" class="tab-sub-link">About our partners</a>
-                                                                <a href="https://calendar.wofford.edu" class="tab-sub-link">Campus Calendar</a>
-                                                                <div class="tab-sub-item">
-                                                                    <div class="tab-sub-title">Social Media</div>
-                                                                    <a class="tab-sub-link" href="https://www.facebook.com/woffordcollege">Facebook</a>
-                                                                    <a class="tab-sub-link" href="https://www.instagram.com/woffordcollege">Instagram</a>
-                                                                    <a class="tab-sub-link" href="https://twitter.com/woffordcollege">Twitter</a>
-                                                                </div>
-                                                                <a href="/about/news/news-staff" class="tab-sub-link">About our staff</a>
-                                                            </div>
-                                                            <div class="tab-item">
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion" class="tab-link">Office of Equity, Diversity and Inclusion</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/about" class="tab-sub-link">About</a>
-                                                                <a href="/wofford.edu/documents/diversity-and-inclusion/diversity-and-inclusion-brochure.pdf" target="_blank" class="tab-sub-link">Diversity and Inclusion Brochure</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/initiatives" class="tab-sub-link">Initiatives</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/lgbtqia-life" class="tab-sub-link">LGBTQIA Life</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/successes-and-milestones" class="tab-sub-link">Successes and Milestones</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/related-programs" class="tab-sub-link">Related Programs</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/student-recruitment" class="tab-sub-link">Student Recruitment</a>
-                                                                <a href="/administration/title-ix" class="tab-sub-link">Title IX</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/staff" class="tab-sub-link">Staff</a>
-                                                            </div>
-                                                            <div class="tab-item">
-                                                                <a href="/about/the-resilience-project" class="tab-link">The Resilience Project</a>
-                                                                <a href="/about/the-resilience-project/covid-19-stories" class="tab-sub-link">COVID-19 stories</a>
-                                                                <a href="/about/the-resilience-project/meditations" class="tab-sub-link">Meditations</a>
-                                                                <a href="https://wofford.co1.qualtrics.com/jfe/form/SV_8HOslWJVQ3mXrIF" target="_blank" class="tab-sub-link">Submit a COVID-19 story</a>
-                                                                <a href="http://connect.wofford.edu/myWofford/resilience/resilienceproject.aspx" target="_blank" class="tab-sub-link">Submit a Resilience Essay</a>
-                                                                <a href="https://connect.wofford.edu/myWofford/resilience/artUpload.aspx" target="_blank" class="tab-sub-link">Upload Art</a>
-                                                                <a href="/wofford.edu/documents/about/resilience-project/toolkit.pdf" target="_blank" class="tab-sub-link">Toolkit</a>
-                                                                <a href="https://www.instagram.com/woffordresilience/" target="_blank" class="tab-sub-link">Instagram</a>
-                                                            </div>
-                                                            <div class="tab-item">
-                                                                <a href="/about/links-resources" class="tab-link">Links + Resources</a>
-                                                                <a href="/links-resources/campus-calendar" class="tab-sub-link">Campus Calendar</a>
-                                                                <a href="/links-resources/campus-map" class="tab-sub-link">Campus Map</a>
-                                                                <a href="/privacypolicy" class="tab-sub-link">Privacy Policy</a>
-                                                                <a href="https://www.bkstr.com/woffordstore/home/en" class="tab-sub-link">Wofford Bookstore</a>
-                                                            </div>
+                                                <div class="tab-content" data-tab-content="2">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/fast-facts" class="tab-link">Fast Facts</a>
+                                                            <a href="/about/fast-facts/phi-beta-kappa" class="tab-sub-link">Phi Beta Kappa</a>
+                                                            <a href="/about/fast-facts/mission-statement" class="tab-sub-link">Mission Statement</a>
+                                                            <a href="/about/fast-facts/accreditation" class="tab-sub-link">Accreditation</a>
+                                                            <a href="/about/fast-facts/major-counts" class="tab-sub-link">Major Counts</a>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-content" data-tab-content="2">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/fast-facts" class="tab-link">Fast Facts</a>
-                                                                <a href="/about/fast-facts/phi-beta-kappa" class="tab-sub-link">Phi Beta Kappa</a>
-                                                                <a href="/about/fast-facts/mission-statement" class="tab-sub-link">Mission Statement</a>
-                                                                <a href="/about/fast-facts/accreditation" class="tab-sub-link">Accreditation</a>
-                                                                <a href="/about/fast-facts/major-counts" class="tab-sub-link">Major Counts</a>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="3">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/about/news" class="tab-link">News + Wofford Today</a>
+                                                            <a href="/about/news/news-archives" class="tab-sub-link">News Archives</a>
+                                                            <a href="/about/news/wofford-today" class="tab-sub-link">Read Wofford Today</a>
+                                                            <a href="http://wofford.meritpages.com" target="_blank" class="tab-sub-link">Read Wofford's Merit Page</a>
+                                                            <a href="/about/news/media-center" class="tab-sub-link">Find media resources</a>
+                                                            <a href="https://connect.wofford.edu/mywofford/omc/forms/request.aspx" target="_blank" class="tab-sub-link">Tell us more</a>
+                                                            <a href="/about/news/partnerships" class="tab-sub-link">About our partners</a>
+                                                            <a href="https://calendar.wofford.edu" class="tab-sub-link">Campus Calendar</a>
+                                                            <div class="tab-sub-item">
+                                                                <div class="tab-sub-title">Social Media</div>
+                                                                <a class="tab-sub-link" href="https://www.facebook.com/woffordcollege">Facebook</a>
+                                                                <a class="tab-sub-link" href="https://www.instagram.com/woffordcollege">Instagram</a>
+                                                                <a class="tab-sub-link" href="https://twitter.com/woffordcollege">Twitter</a>
                                                             </div>
+                                                            <a href="/about/news/news-staff" class="tab-sub-link">About our staff</a>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-content" data-tab-content="3">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/about/news" class="tab-link">News + Wofford Today</a>
-                                                                <a href="/about/news/news-archives" class="tab-sub-link">News Archives</a>
-                                                                <a href="/about/news/wofford-today" class="tab-sub-link">Read Wofford Today</a>
-                                                                <a href="http://wofford.meritpages.com" target="_blank" class="tab-sub-link">Read Wofford's Merit Page</a>
-                                                                <a href="/about/news/media-center" class="tab-sub-link">Find media resources</a>
-                                                                <a href="https://connect.wofford.edu/mywofford/omc/forms/request.aspx" target="_blank" class="tab-sub-link">Tell us more</a>
-                                                                <a href="/about/news/partnerships" class="tab-sub-link">About our partners</a>
-                                                                <a href="https://calendar.wofford.edu" class="tab-sub-link">Campus Calendar</a>
-                                                                <div class="tab-sub-item">
-                                                                    <div class="tab-sub-title">Social Media</div>
-                                                                    <a class="tab-sub-link" href="https://www.facebook.com/woffordcollege">Facebook</a>
-                                                                    <a class="tab-sub-link" href="https://www.instagram.com/woffordcollege">Instagram</a>
-                                                                    <a class="tab-sub-link" href="https://twitter.com/woffordcollege">Twitter</a>
-                                                                </div>
-                                                                <a href="/about/news/news-staff" class="tab-sub-link">About our staff</a>
-                                                            </div>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="4">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion" class="tab-link">Office of Equity, Diversity and Inclusion</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/about" class="tab-sub-link">About</a>
+                                                            <a href="/wofford.edu/documents/diversity-and-inclusion/diversity-and-inclusion-brochure.pdf" target="_blank" class="tab-sub-link">Diversity and Inclusion Brochure</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/initiatives" class="tab-sub-link">Initiatives</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/lgbtqia-life" class="tab-sub-link">LGBTQIA Life</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/successes-and-milestones" class="tab-sub-link">Successes and Milestones</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/related-programs" class="tab-sub-link">Related Programs</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/student-recruitment" class="tab-sub-link">Student Recruitment</a>
+                                                            <a href="/administration/title-ix" class="tab-sub-link">Title IX</a>
+                                                            <a href="/about/office-of-equity-diversity-and-inclusion/staff" class="tab-sub-link">Staff</a>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-content" data-tab-content="4">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion" class="tab-link">Office of Equity, Diversity and Inclusion</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/about" class="tab-sub-link">About</a>
-                                                                <a href="/wofford.edu/documents/diversity-and-inclusion/diversity-and-inclusion-brochure.pdf" target="_blank" class="tab-sub-link">Diversity and Inclusion Brochure</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/initiatives" class="tab-sub-link">Initiatives</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/lgbtqia-life" class="tab-sub-link">LGBTQIA Life</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/successes-and-milestones" class="tab-sub-link">Successes and Milestones</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/related-programs" class="tab-sub-link">Related Programs</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/student-recruitment" class="tab-sub-link">Student Recruitment</a>
-                                                                <a href="/administration/title-ix" class="tab-sub-link">Title IX</a>
-                                                                <a href="/about/office-of-equity-diversity-and-inclusion/staff" class="tab-sub-link">Staff</a>
-                                                            </div>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="5">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/about/jedi" class="tab-link">JEDI/Strategic Vision</a>
+                                                            <a href="/wofford.edu/documents/diversity-and-inclusion/vision-statement.pdf" target="_blank" class="tab-sub-link">Vision Statement</a>
+                                                            <a href="/about/jedi/the-committee" class="tab-sub-link">The Committee</a>
+                                                            <a href="/about/jedi/consultants" class="tab-sub-link">JEDI Consultants</a>
+                                                            <a href="/about/jedi/working-groups" class="tab-sub-link">Working Groups</a>
+                                                            <a href="/about/jedi/reports" class="tab-sub-link">Reports</a>
+                                                            <a href="/about/jedi/listening-sessions" class="tab-sub-link">Listening Sessions</a>
+                                                            <a href="/about/jedi/data-and-readings" class="tab-sub-link">Data and Readings</a>
+                                                            <a href="/about/jedi/student-researchers" class="tab-sub-link">Student Researchers</a>
+                                                            <a href="/about/jedi/qanda-with-jedi" class="tab-sub-link">Q&amp;A with JEDI</a>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-content" data-tab-content="5">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/about/jedi" class="tab-link">JEDI/Strategic Vision</a>
-                                                                <a href="/wofford.edu/documents/diversity-and-inclusion/vision-statement.pdf" target="_blank" class="tab-sub-link">Vision Statement</a>
-                                                                <a href="/about/jedi/the-committee" class="tab-sub-link">The Committee</a>
-                                                                <a href="/about/jedi/consultants" class="tab-sub-link">JEDI Consultants</a>
-                                                                <a href="/about/jedi/working-groups" class="tab-sub-link">Working Groups</a>
-                                                                <a href="/about/jedi/reports" class="tab-sub-link">Reports</a>
-                                                                <a href="/about/jedi/listening-sessions" class="tab-sub-link">Listening Sessions</a>
-                                                                <a href="/about/jedi/data-and-readings" class="tab-sub-link">Data and Readings</a>
-                                                                <a href="/about/jedi/student-researchers" class="tab-sub-link">Student Researchers</a>
-                                                                <a href="/about/jedi/qanda-with-jedi" class="tab-sub-link">Q&amp;A with JEDI</a>
-                                                            </div>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="6">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/about/office-of-the-president" class="tab-link">Office of the President</a>
+                                                            <a href="/about/office-of-the-president/board-of-trustees" class="tab-sub-link">Board of Trustees</a>
+                                                            <a href="/about/office-of-the-president/presidents-cabinet" class="tab-sub-link">President&rsquo;s Cabinet</a>
+                                                            <a href="/about/office-of-the-president/staff" class="tab-sub-link">President&rsquo;s Staff</a>
+                                                            <a href="/about/office-of-the-president/biography-of-nayef-h-samhat" class="tab-sub-link">Biography of Nayef H. Samhat</a>
+                                                            <a href="https://indd.adobe.com/view/ee450ee5-0e2c-4025-a588-665f7b2dd374" target="_blank" class="tab-sub-link">President&rsquo;s Report</a>
+                                                            <a href="/about/office-of-the-president/the-presidents-home" class="tab-sub-link">The President&rsquo;s Home</a>
+                                                            <a href="/about/office-of-the-president/past-presidents" class="tab-sub-link">Past Presidents</a>
+                                                            <a href="/about/office-of-the-president/presidential-international-scholar" class="tab-sub-link">Presidential International Scholar</a>
+                                                            <a href="/advancement/hipp-center" class="tab-sub-link">The Hipp Center</a>
+                                                            <a href="/about/office-of-the-president/essays-papers-speeches" class="tab-sub-link">Essays, Papers + Speeches</a>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-content" data-tab-content="6">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/about/office-of-the-president" class="tab-link">Office of the President</a>
-                                                                <a href="/about/office-of-the-president/board-of-trustees" class="tab-sub-link">Board of Trustees</a>
-                                                                <a href="/about/office-of-the-president/presidents-cabinet" class="tab-sub-link">President&rsquo;s Cabinet</a>
-                                                                <a href="/about/office-of-the-president/staff" class="tab-sub-link">President&rsquo;s Staff</a>
-                                                                <a href="/about/office-of-the-president/biography-of-nayef-h-samhat" class="tab-sub-link">Biography of Nayef H. Samhat</a>
-                                                                <a href="https://indd.adobe.com/view/ee450ee5-0e2c-4025-a588-665f7b2dd374" target="_blank" class="tab-sub-link">President&rsquo;s Report</a>
-                                                                <a href="/about/office-of-the-president/the-presidents-home" class="tab-sub-link">The President&rsquo;s Home</a>
-                                                                <a href="/about/office-of-the-president/past-presidents" class="tab-sub-link">Past Presidents</a>
-                                                                <a href="/about/office-of-the-president/presidential-international-scholar" class="tab-sub-link">Presidential International Scholar</a>
-                                                                <a href="/advancement/hipp-center" class="tab-sub-link">The Hipp Center</a>
-                                                                <a href="/about/office-of-the-president/essays-papers-speeches" class="tab-sub-link">Essays, Papers + Speeches</a>
-                                                            </div>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="7">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/about/the-resilience-project" class="tab-link">The Resilience Project</a>
+                                                            <a href="/about/the-resilience-project/covid-19-stories" class="tab-sub-link">COVID-19 stories</a>
+                                                            <a href="/about/the-resilience-project/meditations" class="tab-sub-link">Meditations</a>
+                                                            <a href="https://wofford.co1.qualtrics.com/jfe/form/SV_8HOslWJVQ3mXrIF" target="_blank" class="tab-sub-link">Submit a COVID-19 story</a>
+                                                            <a href="http://connect.wofford.edu/myWofford/resilience/resilienceproject.aspx" target="_blank" class="tab-sub-link">Submit a Resilience Essay</a>
+                                                            <a href="https://connect.wofford.edu/myWofford/resilience/artUpload.aspx" target="_blank" class="tab-sub-link">Upload Art</a>
+                                                            <a href="/wofford.edu/documents/about/resilience-project/toolkit.pdf" target="_blank" class="tab-sub-link">Toolkit</a>
+                                                            <a href="https://www.instagram.com/woffordresilience/" target="_blank" class="tab-sub-link">Instagram</a>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-content" data-tab-content="7">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/about/the-resilience-project" class="tab-link">The Resilience Project</a>
-                                                                <a href="/about/the-resilience-project/covid-19-stories" class="tab-sub-link">COVID-19 stories</a>
-                                                                <a href="/about/the-resilience-project/meditations" class="tab-sub-link">Meditations</a>
-                                                                <a href="https://wofford.co1.qualtrics.com/jfe/form/SV_8HOslWJVQ3mXrIF" target="_blank" class="tab-sub-link">Submit a COVID-19 story</a>
-                                                                <a href="http://connect.wofford.edu/myWofford/resilience/resilienceproject.aspx" target="_blank" class="tab-sub-link">Submit a Resilience Essay</a>
-                                                                <a href="https://connect.wofford.edu/myWofford/resilience/artUpload.aspx" target="_blank" class="tab-sub-link">Upload Art</a>
-                                                                <a href="/wofford.edu/documents/about/resilience-project/toolkit.pdf" target="_blank" class="tab-sub-link">Toolkit</a>
-                                                                <a href="https://www.instagram.com/woffordresilience/" target="_blank" class="tab-sub-link">Instagram</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-content" data-tab-content="8">
-                                                        <div class="tab-items">
-                                                            <div class="tab-item">
-                                                                <a href="/about/links-resources" class="tab-link">Links + Resources</a>
-                                                                <a href="/links-resources/campus-calendar" class="tab-sub-link">Campus Calendar</a>
-                                                                <a href="/links-resources/campus-map" class="tab-sub-link">Campus Map</a>
-                                                                <a href="/privacypolicy" class="tab-sub-link">Privacy Policy</a>
-                                                                <a href="https://www.bkstr.com/woffordstore/home/en" class="tab-sub-link">Wofford Bookstore</a>
-                                                            </div>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="8">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/about/links-resources" class="tab-link">Links + Resources</a>
+                                                            <a href="/links-resources/campus-calendar" class="tab-sub-link">Campus Calendar</a>
+                                                            <a href="/links-resources/campus-map" class="tab-sub-link">Campus Map</a>
+                                                            <a href="/privacypolicy" class="tab-sub-link">Privacy Policy</a>
+                                                            <a href="https://www.bkstr.com/woffordstore/home/en" class="tab-sub-link">Wofford Bookstore</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -272,177 +272,284 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="home-nav-item">
-                                <div class="home-nav-link" data-modal-open>Academics</div>
-                                <div class="home-modal" data-modal>
-                                    <div class="home-modal-container home-modal-container-lg">
-                                        <button class="modal-close" data-modal-close>&times;</button>
-                                        <div class="home-tab-container" data-tab>
-                                            <div class="tab-header">
-                                                <div class="tab-heading">Academics</div>
-                                                <div class="tab-heading">Getting Started</div>
+                        </div>
+                        <div class="home-nav-item">
+                            <button class="home-nav-link" data-modal-open>Academics</button>
+                            <div class="home-modal" data-modal>
+                                <div class="home-modal-container home-modal-container-lg">
+                                    <button class="modal-close" data-modal-close>&times;</button>
+                                    <div class="home-tab-container" data-tab>
+                                        <div class="tab-header">
+                                            <div class="tab-heading">Academics</div>
+                                            <div class="tab-heading">Getting Started</div>
+                                        </div>
+                                        <div class="tab-body">
+                                            <div class="tab-button-group wofford-scroll">
+                                                <a href="/academics" class="tab-button" data-tab-button="1">
+                                                    <div class="tab-title">Academics</div>
+                                                    <div class="tab-button-description">Find out more information about the academic programs at Wofford.</div>
+                                                </a>
+                                                <a href="/academics/provost" class="tab-button" data-tab-button="2">
+                                                    <div class="tab-title">Provost</div>
+                                                    <div class="tab-button-description">The Office of the Provost ensures the excellence of Wofford&rsquo;s rigorous academic program.</div>
+                                                </a>
+                                                <a href="/academics/majors-and-programs" class="tab-button" data-tab-button="3">
+                                                    <div class="tab-title">Majors + Programs</div>
+                                                    <div class="tab-button-description">Wofford offers 67 majors, minors and programs.</div>
+                                                </a>
+                                                <a href="/academics/interim" class="tab-button" data-tab-button="4">
+                                                    <div class="tab-title">Interim</div>
+                                                    <div class="tab-button-description">January term expands walls of traditional classroom.</div>
+                                                </a>
+                                                <a href="/academics/the-mungo-exchange" class="tab-button" data-tab-button="5">
+                                                    <div class="tab-title">The Mungo Exchange</div>
+                                                    <div class="tab-button-description">Helping students prepare for life after Wofford.</div>
+                                                </a>
+                                                <a href="/academics/international-programs" class="tab-button" data-tab-button="6">
+                                                    <div class="tab-title">International Programs</div>
+                                                    <div class="tab-button-description">Opportunities that foster global awareness and intercultural development.</div>
+                                                </a>
+                                                <a href="/academics/career-center" class="tab-button" data-tab-button="7">
+                                                    <div class="tab-title">Career Center</div>
+                                                    <div class="tab-button-description">Preparing students for life through professional development and entrepreneurial training.</div>
+                                                </a>
+                                                <a href="/academics/entrepreneurship-innovation" class="tab-button" data-tab-button="8">
+                                                    <div class="tab-title">Entrepreneurship + Innovation</div>
+                                                    <div class="tab-button-description">Promoting innovative teaching practices.</div>
+                                                </a>
+                                                <a href="/academics/center-for-community-based-learning" class="tab-button" data-tab-button="9">
+                                                    <div class="tab-title">Center for Community-Based Learning</div>
+                                                    <div class="tab-button-description">Experiences that prepare superior students for meaningful lives as citizens.</div>
+                                                </a>
+                                                <a href="/academics/support-services" class="tab-button" data-tab-button="10">
+                                                    <div class="tab-title">Support Services</div>
+                                                    <div class="tab-button-description">Peer tutoring, research assistance and other resources to help students.</div>
+                                                </a>
+                                                <a href="/academics/library" class="tab-button" data-tab-button="11">
+                                                    <div class="tab-title">Library</div>
+                                                    <div class="tab-button-description">Check-out a book or find a quiet place to study.</div>
+                                                </a>
+                                                <a href="/academics/registrar" class="tab-button" data-tab-button="12">
+                                                    <div class="tab-title">Registrar</div>
+                                                    <div class="tab-button-description">Office of the Registrar coordinates academic activities and maintains records.</div>
+                                                </a>
+                                                <a href="/academics/nsse" class="tab-button" data-tab-button="13">
+                                                    <div class="tab-title">NSSE</div>
+                                                    <div class="tab-button-description">Results help Wofford improve the student educational experience.</div>
+                                                </a>
+                                                <a href="/academics/undergraduate-research" class="tab-button" data-tab-button="14">
+                                                    <div class="tab-title">Undergraduate Research</div>
+                                                    <div class="tab-button-description">The Office of Undergraduate Research provides support to all aspects of undergraduate research and other creative activities.</div>
+                                                </a>
                                             </div>
-                                            <div class="tab-body">
-                                                <div class="tab-button-group wofford-scroll">
-                                                    <div class="tab-button" data-tab-button="1">
-                                                        <div class="tab-title">Academics</div>
-                                                        <div class="tab-button-description">Find out more information about the academic programs at Wofford.</div>
+                                            <div class="home-tabs wofford-scroll">
+                                                <div class="tab-content" data-tab-content="1">Academics</div>
+                                                <div class="tab-content" data-tab-content="2">Provost</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-nav-item">
+                            <button class="home-nav-link" data-modal-open>Admission</button>
+                            <div class="home-modal" data-modal>
+                                <div class="home-modal-container home-modal-container-lg">
+                                    <button class="modal-close" data-modal-close>&times;</button>
+                                    <div class="home-tab-container" data-tab>
+                                        <div class="tab-header">
+                                            <div class="tab-heading">Admission</div>
+                                            <div class="tab-heading">Getting Started</div>
+                                        </div>
+                                        <div class="tab-body">
+                                            <div class="tab-button-group wofford-scroll">
+                                                <a href="/admission" class="tab-button" data-tab-button="1">
+                                                    <div class="tab-title">Admission</div>
+                                                    <div class="tab-button-description">Find out more about admission.</div>
+                                                </a>
+                                            </div>
+                                            <div class="home-tabs wofford-scroll">
+                                                <div class="tab-content" data-tab-content="1">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/admission" class="tab-link">Admission</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="tab-button" data-tab-button="2">
-                                                        <div class="tab-title">Provost</div>
-                                                        <div class="tab-button-description">The Office of the Provost ensures the excellence of Wofford&rsquo;s rigorous academic program.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="3">
-                                                        <div class="tab-title">Majors + Programs</div>
-                                                        <div class="tab-button-description">Wofford offers 67 majors, minors and programs.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="4">
-                                                        <div class="tab-title">Interim</div>
-                                                        <div class="tab-button-description">January term expands walls of traditional classroom.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="5">
-                                                        <div class="tab-title">The Mungo Exchange</div>
-                                                        <div class="tab-button-description">Helping students prepare for life after Wofford.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="6">
-                                                        <div class="tab-title">International Programs</div>
-                                                        <div class="tab-button-description">Opportunities that foster global awareness and intercultural development.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="7">
-                                                        <div class="tab-title">Career Center</div>
-                                                        <div class="tab-button-description">Preparing students for life through professional development and entrepreneurial training.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="8">
-                                                        <div class="tab-title">Entrepreneurship + Innovation</div>
-                                                        <div class="tab-button-description">Promoting innovative teaching practices.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="9">
-                                                        <div class="tab-title">Center for Community-Based Learning</div>
-                                                        <div class="tab-button-description">Experiences that prepare superior students for meaningful lives as citizens.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="10">
-                                                        <div class="tab-title">Support Services</div>
-                                                        <div class="tab-button-description">Peer tutoring, research assistance and other resources to help students.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="11">
-                                                        <div class="tab-title">Library</div>
-                                                        <div class="tab-button-description">Check-out a book or find a quiet place to study.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="12">
-                                                        <div class="tab-title">Registrar</div>
-                                                        <div class="tab-button-description">Office of the Registrar coordinates academic activities and maintains records.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="13">
-                                                        <div class="tab-title">NSSE</div>
-                                                        <div class="tab-button-description">Results help Wofford improve the student educational experience.</div>
-                                                    </div>
-                                                    <div class="tab-button" data-tab-button="14">
-                                                        <div class="tab-title">Undergraduate Research</div>
-                                                        <div class="tab-button-description">The Office of Undergraduate Research provides support to all aspects of undergraduate research and other creative activities.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="home-tabs wofford-scroll">
-                                                    <div class="tab-content" data-tab-content="1"> Academics</div>
-                                                    <div class="tab-content" data-tab-content="2"> Provost</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="home-nav-item">
-                                <div class="home-nav-link" data-modal-open>Admission</div>
-                            </div>
-                            <div class="home-nav-item">
-                                <div class="home-nav-link" data-modal-open>Students</div>
-                            </div>
-                            <div class="home-nav-item">
-                                <div class="home-nav-link" data-modal-open>Athletics</div>
+                        </div>
+                        <div class="home-nav-item">
+                            <button class="home-nav-link" data-modal-open>Students</button>
+                            <div class="home-modal" data-modal>
+                                <div class="home-modal-container home-modal-container-lg">
+                                    <button class="modal-close" data-modal-close>&times;</button>
+                                    <div class="home-tab-container" data-tab>
+                                        <div class="tab-header">
+                                            <div class="tab-heading">Students</div>
+                                            <div class="tab-heading">Getting Started</div>
+                                        </div>
+                                        <div class="tab-body">
+                                            <div class="tab-button-group wofford-scroll">
+                                                <a href="/student-experiences" class="tab-button" data-tab-button="1">
+                                                    <div class="tab-title">Students</div>
+                                                    <div class="tab-button-description">Find out more about student experiences.</div>
+                                                </a>
+                                            </div>
+                                            <div class="home-tabs wofford-scroll">
+                                                <div class="tab-content" data-tab-content="1">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/student-experiences" class="tab-link">Student Experiences</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="home-nav-menu-secondary">
-                            <div class="home-nav-item"><a class="home-nav-link" href="/give">Give</a></div>
-                            <!-- <div class="home-nav-item">
+                        <div class="home-nav-item">
+                            <button class="home-nav-link" data-modal-open>Athletics</button>
+                            <div class="home-modal" data-modal>
+                                <div class="home-modal-container home-modal-container-lg">
+                                    <button class="modal-close" data-modal-close>&times;</button>
+                                    <div class="home-tab-container" data-tab>
+                                        <div class="tab-header">
+                                            <div class="tab-heading">Athletics</div>
+                                            <div class="tab-heading">Getting Started</div>
+                                        </div>
+                                        <div class="tab-body">
+                                            <div class="tab-button-group wofford-scroll">
+                                                <a href="https://woffordterriers.com" class="tab-button" data-tab-button="1">
+                                                    <div class="tab-title">Athletics</div>
+                                                    <div class="tab-button-description">Find out more about Wofford Athletics.</div>
+                                                </a>
+                                                <a href="/terrier-club" class="tab-button" data-tab-button="2">
+                                                    <div class="tab-title">Terrier Club</div>
+                                                    <div class="tab-button-description">Scholarship support and essential resources to more than 350 Wofford College student-athletes.</div>
+                                                </a>
+                                            </div>
+                                            <div class="home-tabs wofford-scroll">
+                                                <div class="tab-content" data-tab-content="1">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="https://woffordterriers.com" class="tab-link">Athletics</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content" data-tab-content="2">
+                                                    <div class="tab-items">
+                                                        <div class="tab-item">
+                                                            <a href="/terrier-club" class="tab-link">Terrier Club</a>
+                                                            <a href="/terrier-club/about" class="tab-sub-link">About the Terrier Club</a>
+                                                            <a href="/terrier-club/ways-to-give" class="tab-sub-link">Ways to Give</a>
+                                                            <a href="/terrier-club/giving-guide-benefits" class="tab-sub-link">Giving Guide + Benefits</a>
+                                                            <a href="/terrier-club/ways-to-give/annual-giving-to-the-terrier-club" class="tab-sub-link">Annual Giving</a>
+                                                            <a href="/terrier-club/ways-to-give/endowed-giving" class="tab-sub-link">Endowed Giving</a>
+                                                            <a href="/terrier-club/ways-to-give/goal-line-club" class="tab-sub-link">Goal Line Club</a>
+                                                            <a href="/terrier-club/ways-to-give/sport-specific-giving" class="tab-sub-link">Terrier Excellence Fund</a>
+                                                            <a href="/terrier-club/about/events" class="tab-sub-link">Events</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-nav-menu-secondary">
+                        <div class="home-nav-item"><a class="home-nav-link" href="/give">Give</a></div>
+                        <!-- <div class="home-nav-item">
                                 <img class="home-nav-icon" src="./images/icons/search-user.png" alt="User" data-modal-open>
                             </div> -->
-                            <div class="home-nav-item">
-                                <img class="home-nav-icon" src="./images/icons/search-light.png" alt="Search" data-modal-open>
-                                <div class="home-modal" data-modal>
-                                    <div class="home-modal-container">
-                                        <button class="modal-close" data-modal-close>&times;</button>
-                                        <form role="search" method="get" class="search-container" action="/x91">
-                                            <input type="search" id="search-input" class="search-input" placeholder="What are you looking for?" value="" name="keyword" autocomplete="off">
-                                            <img id="search-icon-clear" class="search-icon-clear" src="./images/icons/close.png" alt="clear search">
-                                            <div>|</div>
-                                            <input type="submit" class="search-icon-submit" value="Search">
-                                        </form>
-                                        <div class="popular-search">
-                                            <h2>Popular Searches</h2>
-                                            <div class="popular-search-items wofford-scroll">
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Majors and Programs</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Admission</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Schedule a Visit</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Financial Aid</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Campus Calendar</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Campus Map</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Fast Facts</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Employment</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Search People</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Tuition + Fees</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">International Programs</div>
-                                                </a>
-                                                <a class="popular-search-item" href="#">
-                                                    <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
-                                                    <div class="popular-search-title">Registrar</div>
-                                                </a>
-                                            </div>
+                        <div class="home-nav-item">
+                            <button data-modal-open>
+                                <img class="home-nav-icon" src="./images/icons/search-light.png" alt="Search">
+                            </button>
+                            <div class="home-modal" data-modal>
+                                <div class="home-modal-container">
+                                    <button class="modal-close" data-modal-close>&times;</button>
+                                    <form role="search" method="get" class="search-container" action="/x91">
+                                        <input type="search" id="search-input" class="search-input" placeholder="What are you looking for?" value="" name="keyword" autocomplete="off">
+                                        <img id="search-icon-clear" class="search-icon-clear" src="./images/icons/close.png" alt="clear search">
+                                        <div>|</div>
+                                        <input type="submit" class="search-icon-submit" value="Search">
+                                    </form>
+                                    <div class="popular-search">
+                                        <h2>Popular Searches</h2>
+                                        <div class="popular-search-items wofford-scroll">
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Majors and Programs</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Admission</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Schedule a Visit</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Financial Aid</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Campus Calendar</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Campus Map</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Fast Facts</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Employment</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Search People</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Tuition + Fees</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">International Programs</div>
+                                            </a>
+                                            <a class="popular-search-item" href="#">
+                                                <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
+                                                <div class="popular-search-title">Registrar</div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </nav>
-                </div>
-            </header>
-            <div class="home-media-container">
-                <img class="home-media-item" src="./images/site/dev-header.jpg">
-                <!-- <video class="home-media-item" autoplay muted loop playsinline>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="home-media-container">
+            <img class="home-media-item" src="./images/site/dev-header.jpg">
+            <!-- <video class="home-media-item" autoplay muted loop playsinline>
                     <source src="./video/wofford-campus.webm" type="video/webm"> Your browser does not support the video tag.
                 </video> -->
-            </div>
-        </section>
+        </div>
+    </section>
+    <main>
         <!-- CTA section -->
         <section class="home-section-cta">
             <div class="cta-container">
@@ -575,8 +682,8 @@
                 </div>
             </div>
         </section>
-        <section style="display: flex; justify-content: center; align-items: center; height: 300px;">Footer</section>
     </main>
+    <section style="display: flex; justify-content: center; align-items: center; height: 300px;">Footer</section>
     <script src="./index.js"></script>
 </body>
 
