@@ -46,7 +46,6 @@ a:focus-visible {
 .home-nav-menu-secondary {
     display: flex;
     align-items: center;
-    gap: 4px;
 }
 
 .home-nav,
@@ -922,7 +921,6 @@ input[type='search']::-webkit-search-cancel-button {
     }
 
     .home-nav-menu-secondary {
-        gap: 4px;
         margin-left: initial;
     }
 
