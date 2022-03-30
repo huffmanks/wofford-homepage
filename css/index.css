@@ -28,24 +28,17 @@ img {
     padding: 0.375rem 1.5rem;
     background-color: #8a6e4b;
     color: #fff;
-    border: 1px solid transparent;
+    border: none;
+    outline: none;
     border-radius: 50px;
-    -webkit-border-radius: 50px;
-
     font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
-    vertical-align: middle;
-
     cursor: pointer;
-    -ms-touch-action: manipulation;
     touch-action: manipulation;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     transition: color 0.15s ease-in-out, background-color 0.3s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

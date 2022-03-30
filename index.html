@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/icons/favicon.ico">
     <link href="https://use.typekit.net/sbo3pwk.css" rel="stylesheet preload" as="style">
-    <!-- <link rel="stylesheet" href="wofford-current.css"> -->
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/wofford-current.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Homepage</title>
 </head>
 
@@ -466,12 +466,21 @@
                         </div>
                     </div>
                     <div class="home-nav-menu-secondary">
-                        <div class="home-nav-item"><a class="home-nav-link" href="/give">Give</a></div>
+                        <div class="home-nav-item">
+                            <a class="home-nav-link" href="/give">Give</a>
+                        </div>
                         <!-- <div class="home-nav-item">
-                                <img class="home-nav-icon" src="./images/icons/search-user.png" alt="User" data-modal-open>
+                                <button class="home-nav-link" data-modal-open>
+                                    <img class="home-nav-icon" src="./images/icons/search-user.png" alt="User">
+                                </button>
+                                <div class="home-modal" data-modal>
+                                    <div class="home-modal-container">
+                                        <button class="modal-close" data-modal-close>&times;</button>
+                                    </div>
+                                </div>
                             </div> -->
                         <div class="home-nav-item">
-                            <button data-modal-open>
+                            <button class="home-nav-link" data-modal-open>
                                 <img class="home-nav-icon" src="./images/icons/search-light.png" alt="Search">
                             </button>
                             <div class="home-modal" data-modal>
@@ -484,7 +493,7 @@
                                         <input type="submit" class="search-icon-submit" value="Search">
                                     </form>
                                     <div class="popular-search">
-                                        <h2>Popular Searches</h2>
+                                        <div class="popular-search-heading">Popular Searches</div>
                                         <div class="popular-search-items wofford-scroll">
                                             <a class="popular-search-item" href="#">
                                                 <img class="popular-search-image" src="./images/site/popular-search-01.jpg" alt="popular search item">
@@ -546,8 +555,8 @@
         <div class="home-media-container">
             <img class="home-media-item" src="./images/site/dev-header.jpg">
             <!-- <video class="home-media-item" autoplay muted loop playsinline>
-                    <source src="./video/wofford-campus.webm" type="video/webm"> Your browser does not support the video tag.
-                </video> -->
+                <source src="./video/wofford-campus.webm" type="video/webm"> Your browser does not support the video tag.
+            </video> -->
         </div>
     </section>
     <main>
@@ -619,7 +628,7 @@
         <section class="home-section-give">
             <div class="give-container">
                 <div>Looking for ways to support the college, students and more?</div>
-                <a href="https://wofford.edu/give" class="btn btn-dark">Give</a>
+                <a href="https://wofford.edu/give" class="btn-dark">Give</a>
             </div>
         </section>
         <!-- Upcoming events section -->
@@ -669,16 +678,16 @@
                 <div class="social-text"> Follow us on social media! </div>
                 <div class="social-links">
                     <a class="social-link" href="https://www.facebook.com/woffordcollege">
-                        <img class="social-icon" src="./images/icons/facebook.png" alt="facebook icon">
+                        <img class="social-link-icon" src="./images/icons/facebook.png" alt="facebook icon">
                     </a>
                     <a class="social-link" href="https://twitter.com/woffordcollege">
-                        <img class="social-icon" src="./images/icons/twitter.png" alt="twitter icon">
+                        <img class="social-link-icon" src="./images/icons/twitter.png" alt="twitter icon">
                     </a>
                     <a class="social-link" href="https://www.instagram.com/woffordcollege">
-                        <img class="social-icon" src="./images/icons/instagram.png" alt="instagram icon">
+                        <img class="social-link-icon" src="./images/icons/instagram.png" alt="instagram icon">
                     </a>
                     <a class="social-link" href="https://youtube.com/woffordcollegeofficial">
-                        <img class="social-icon" src="./images/icons/youtube.png" alt="youtube icon">
+                        <img class="social-link-icon" src="./images/icons/youtube.png" alt="youtube icon">
                     </a>
                 </div>
             </div>

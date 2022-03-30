@@ -15,6 +15,5 @@
         - .event-title font
         - Link hover (no underline, gray color, etc.)
             - check nav menu links, tab links, etc.
-        - Give button
-        - search input, search h2
         - search spacing on mobile
+    - Mobile menu close button styles
