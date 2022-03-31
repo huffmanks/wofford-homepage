@@ -217,6 +217,11 @@ button.modal-close:hover {
     gap: 40px;
 }
 
+.tab-small .tab-header,
+.tab-small .tab-body {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .tab-header {
     margin-bottom: 30px;
 }
@@ -225,6 +230,11 @@ button.modal-close:hover {
 .home-tabs {
     height: 50vh;
     overflow-y: auto;
+}
+
+.tab-small .tab-button-group,
+.tab-small .home-tabs {
+    height: 275px;
 }
 
 .tab-button-group {
@@ -986,14 +996,16 @@ input[type='search']::-webkit-search-cancel-button {
         padding: 0;
     }
 
-    .tab-body {
+    .tab-body,
+    .tab-small .tab-body {
         grid-template-columns: 1fr;
     }
 
-    .tab-button-group {
+    .tab-button-group,
+    .tab-small .tab-button-group {
         grid-template-columns: 1fr;
         height: auto;
-        max-height: 500px;
+        max-height: 400px;
         margin: 20px 0;
         padding: 0 10px;
     }
@@ -1193,7 +1205,8 @@ input[type='search']::-webkit-search-cancel-button {
         width: 14px;
     }
 
-    .tab-button-group {
+    .tab-button-group,
+    .tab-small .tab-button-group {
         margin: 10px 0;
         padding: 0 10px 0 0;
     }
