@@ -935,8 +935,11 @@ input[type='search']::-webkit-search-cancel-button {
         padding: 15px 10px;
     }
 
-    .home-nav-logo .home-nav-link {
-        width: 100px;
+    .home-nav-logo {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .home-nav-menu .home-nav-link {
@@ -1082,6 +1085,17 @@ input[type='search']::-webkit-search-cancel-button {
         padding: 75px 20px 50px 55px;
     }
 
+    .home-nav-logo {
+        position: static;
+        top: initial;
+        left: initial;
+        transform: none;
+    }
+
+    .home-nav-item.mobile-hide {
+        display: none;
+    }
+
     .cta-description {
         font-size: 15px;
     }
@@ -1208,11 +1222,7 @@ input[type='search']::-webkit-search-cancel-button {
     }
 
     .home-nav-logo .home-nav-link {
-        width: 85px;
-    }
-
-    .home-nav-menu-secondary .home-nav-link {
-        font-size: 14px;
+        width: 100px;
     }
 
     .home-nav-link {

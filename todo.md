@@ -5,8 +5,3 @@
 2. Fixes
     - iOS Safari
         - Mobile nav menu collapse
-    - Mobile (Apple and Android)
-        - News story arrows not centered
-        - Wofford logo centered
-    - Scroll location
-        - Different
