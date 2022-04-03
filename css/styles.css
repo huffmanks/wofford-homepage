@@ -972,7 +972,7 @@ input[type='search']::-webkit-search-cancel-button {
         top: initial;
         left: initial;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     .home-nav-menu .home-modal-container {
