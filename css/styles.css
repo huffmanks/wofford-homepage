@@ -23,6 +23,17 @@ a:focus-visible {
     outline: none;
 }
 
+/* Home alert section */
+.home-section-alert {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.home-section-alert a:hover {
+    color: #95866a;
+}
+
 /* Nav and media section */
 .home-section-nav-media {
     position: relative;
