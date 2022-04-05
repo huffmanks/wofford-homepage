@@ -26,6 +26,8 @@ a:focus-visible {
 /* Home alert section */
 .home-section-alert {
     padding: 20px;
+    background-color: #282829;
+    color: #fff;
     font-size: 18px;
     text-align: center;
 }
