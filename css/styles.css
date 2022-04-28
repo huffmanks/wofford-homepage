@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Poynter';
-    src: url('../fonts/poynter-regular.ttf') format('truetype');
+    src: url('https://wofford.edu/wofford.edu/images/site/fonts/poynter_roman_one.woff2') format('woff2'),
+        url('https://wofford.edu/wofford.edu/images/site/fonts/poynter_roman_one.woff') format('woff');
     font-display: swap;
 }
 
@@ -21,6 +22,14 @@ a:focus-visible {
     box-shadow: 0 0 5px 2px rgb(255, 255, 255);
     border-radius: 5px;
     outline: none;
+}
+
+.home-section-alert > p,
+.cta-description > p,
+.story-subtitle > p,
+.news-archive-text > p,
+.social-text > p {
+    margin-bottom: 0;
 }
 
 /* Home alert section */
@@ -163,6 +172,7 @@ a:focus-visible {
 
 .home-nav-icon {
     width: 16px;
+    max-width: 16px;
 }
 
 /* Modal */
@@ -381,7 +391,7 @@ input.search-icon-submit {
     width: 14px;
     height: 14px;
     padding: 5px;
-    background: url('../images/icons/search-dark.png') center/cover no-repeat;
+    background: url('https://wofford.edu/wofford.edu/images/site/home/2022/search-dark.png') center/cover no-repeat;
     text-indent: -9999px;
     border: none;
     outline: none;
@@ -389,7 +399,7 @@ input.search-icon-submit {
 }
 
 input.search-icon-submit:hover {
-    background: url('../images/icons/search-dark.png') center/cover no-repeat;
+    background: url('https://wofford.edu/wofford.edu/images/site/home/2022/search-dark.png') center/cover no-repeat;
     border: none;
 }
 
@@ -413,7 +423,7 @@ input[type='search']::-webkit-search-cancel-button {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 20px;
-    max-height: 240px;
+    max-height: 300px;
     padding-right: 10px;
     overflow-y: auto;
 }
@@ -466,7 +476,18 @@ input[type='search']::-webkit-search-cancel-button {
     left: 0;
     right: 0;
     height: 20px;
-    background: linear-gradient(rgba(40, 40, 41, 0.1) 10%, rgba(40, 40, 41, 0.2) 20%, rgba(40, 40, 41, 0.3) 30%, rgba(40, 40, 41, 0.4) 40%, rgba(40, 40, 41, 0.5) 50%, rgba(40, 40, 41, 0.6) 60%, rgba(40, 40, 41, 0.7) 70%, rgba(40, 40, 41, 0.8) 80%, rgba(40, 40, 41, 0.9) 90%, #282829 100%);
+    background: linear-gradient(
+        rgba(40, 40, 41, 0.1) 10%,
+        rgba(40, 40, 41, 0.2) 20%,
+        rgba(40, 40, 41, 0.3) 30%,
+        rgba(40, 40, 41, 0.4) 40%,
+        rgba(40, 40, 41, 0.5) 50%,
+        rgba(40, 40, 41, 0.6) 60%,
+        rgba(40, 40, 41, 0.7) 70%,
+        rgba(40, 40, 41, 0.8) 80%,
+        rgba(40, 40, 41, 0.9) 90%,
+        #282829 100%
+    );
 }
 
 .cta-container {
@@ -717,11 +738,11 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .events-container {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 45px 75px;
-    width: 90%;
     margin: 0 auto;
     color: #282829;
 }
@@ -735,7 +756,7 @@ input[type='search']::-webkit-search-cancel-button {
 
 .events {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
     justify-content: center;
     align-items: center;
     gap: 30px 20px;
@@ -750,6 +771,7 @@ input[type='search']::-webkit-search-cancel-button {
 .event-title {
     margin-bottom: 12px;
     font-size: 24px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -775,6 +797,8 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .instafeed-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     transition: all 0.6s ease-in-out;
 }
 
@@ -1090,6 +1114,10 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 @media (max-width: 650px) {
+    .popular-search-items {
+        max-height: 240px;
+    }
+
     .give-container {
         flex-direction: column;
     }
