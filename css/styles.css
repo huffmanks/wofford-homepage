@@ -1059,7 +1059,7 @@ input[type='search']::-webkit-search-cancel-button {
 
     .tab-button:hover,
     .tab-button:focus {
-        background-color: #444;
+        background-color: #424242;
     }
 
     .tab-button,
