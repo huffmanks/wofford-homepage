@@ -758,11 +758,10 @@ input[type='search']::-webkit-search-cancel-button {
 
 .events {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     justify-content: center;
     align-items: center;
     gap: 30px 20px;
-    flex: 1;
 }
 
 .event-date {
