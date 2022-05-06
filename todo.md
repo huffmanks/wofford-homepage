@@ -1,36 +1,18 @@
-## nav section
+## alert section
 
-<!-- -   Font/logo bigger on desktop -->
+-   Mobile, Make font smaller
+
+## nav section
 
 -   Instead of clicking nav item, modal opens on hover
 
-## mobile menu
-
-<!-- -   Remove title descriptions -->
-
-## media section
-
-<!-- -   No pausing -->
-
-## cta section
-
-<!-- -   Remove gradient -->
-<!-- -   Add padding at top -->
-
 ## news section
 
-<!-- -   Add background color to title/subtitle -->
-
-## events section
-
-<!-- -   Align events to the top -->
-<!-- -   Bigger fonts -->
-<!-- -   Events grid media query -->
+-   Mobile, title/subtitle overlay not on bottom
 
 ## social media section
 
-<!-- -   Add LinkedIN -->
-<!-- -   Mobile/maybe iOS specific, images having black bars -->
+-   Mobile, icons all vertical stacked?? not 3/2 split
 
 ---
 
@@ -43,4 +25,5 @@
 ## footer
 
 -   Add white Wofford logo to footer above address
+-   Fix markup
 -   Logo on very bottom for mobile
