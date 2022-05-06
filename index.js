@@ -1,5 +1,3 @@
-const videoEl = document.querySelector('video.home-media-item')
-
 // Modal
 const modalEls = Array.from(document.querySelectorAll('[data-modal]'))
 const openModalBtns = Array.from(document.querySelectorAll('[data-modal-open]'))
@@ -44,10 +42,6 @@ openModalBtns.map((button) => {
         if (button.nextElementSibling.matches('[data-modal]')) {
             document.body.classList.add('modal-open')
             button.nextElementSibling.classList.toggle('open')
-
-            if (videoEl) {
-                videoEl.pause()
-            }
         }
     })
 })
@@ -57,10 +51,6 @@ closeModalBtns.map((button) => {
         document.body.classList.remove('modal-open')
         button.closest('[data-modal]').classList.remove('open')
         button.closest('.home-nav-item').classList.remove('active')
-
-        if (videoEl) {
-            videoEl.play()
-        }
     })
 })
 
@@ -70,10 +60,6 @@ modalEls.map((modal) => {
             document.body.classList.remove('modal-open')
             modal.classList.remove('open')
             modal.closest('.home-nav-item').classList.remove('active')
-
-            if (videoEl) {
-                videoEl.play()
-            }
         }
     })
 })
