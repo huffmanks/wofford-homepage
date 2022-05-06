@@ -6,6 +6,10 @@
 
 -   Instead of clicking nav item, modal opens on hover
 
+## cta section
+
+-   When hovering item make a bounce animation
+
 ## news section
 
 -   Mobile, title/subtitle overlay not on bottom
