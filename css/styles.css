@@ -1025,6 +1025,12 @@ video::-webkit-media-controls-panel {
     }
 }
 
+@media (min-width: 861px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
 @media (max-width: 860px) {
     .home-nav {
         justify-content: space-between;
