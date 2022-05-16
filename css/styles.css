@@ -615,9 +615,6 @@ video::-webkit-media-controls-panel {
 }
 
 .news-story {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     position: relative;
     color: #fff;
     font-weight: 400;
@@ -646,6 +643,10 @@ video::-webkit-media-controls-panel {
 
 .news-story.next {
     transform: translateX(30%);
+}
+
+.story-image {
+    display: block;
 }
 
 .news-story.prev .story-image,
