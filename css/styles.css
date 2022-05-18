@@ -615,6 +615,7 @@ video::-webkit-media-controls-panel {
 }
 
 .news-story {
+    display: block;
     position: relative;
     color: #fff;
     font-weight: 400;
